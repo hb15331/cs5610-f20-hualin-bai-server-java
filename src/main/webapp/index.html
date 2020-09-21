@@ -21,7 +21,7 @@
 
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
     <!-- Course Manager label -->
-    <a class="navbar-brand wbdv-label wbdv-course-manager" href="#">Course Manager</a>
+    <a class="navbar-brand" href="#">Course Manager</a>
     <!-- Toggle Button to hide items for small screen -->
     <button class="navbar-toggler"
             type="button"
@@ -41,12 +41,13 @@
     </div>
 
     <form class="form-inline">
+        <label for="title-fld" class="wbdv-label wbdv-course-manager"></label>
         <div class="input-group">
             <!-- New course title field -->
             <input type="text"
+                   id="title-fld"
                    class="form-control wbdv-field wbdv-new-course"
-                   placeholder="New course title"
-                   aria-label="add-course">
+                   placeholder="New course title">
             <div class="input-group-append">
                 <!-- Add course button/link -->
                 <button class="btn btn-success wbdv-button wbdv-add-course" type="submit">+</button>
@@ -91,6 +92,7 @@
         <!-- Sort header -->
         <th class="wbdv-header wbdv-sort">
             <a href="#"><i class="fa fa-sort"></i></a>
+<!--            <button class="btn btn-link"><i class="fa fa-sort"></i></button>-->
         </th>
 
         <th>&nbsp;</th>
