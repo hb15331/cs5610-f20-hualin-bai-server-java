@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          rel="stylesheet"/>
+    <link href="index.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="initial-scale=1.0">
+
+</head>
+
+<body class="sticky-header">
+
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+    <!-- Course Manager label -->
+    <a class="navbar-brand wbdv-label wbdv-course-manager" href="#">Course Manager</a>
+    <!-- Toggle Button to hide items for small screen -->
+    <button class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#hidden-dropdown">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Navbar Items -->
+    <div class="collapse navbar-collapse"
+         id="hidden-dropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item">
+                <a class="nav-link" href="login/login.template.client.html">Log in</a></li>
+        </ul>
+    </div>
+
+    <form class="form-inline">
+        <div class="input-group">
+            <!-- New course title field -->
+            <input type="text"
+                   class="form-control wbdv-field wbdv-new-course"
+                   placeholder="New course title"
+                   aria-label="add-course">
+            <div class="input-group-append">
+                <!-- Add course button/link -->
+                <button class="btn btn-success wbdv-button wbdv-add-course" type="submit">+</button>
+            </div>
+        </div>
+    </form>
+
+    <!-- New course title field -->
+<!--    <form class="form-inline">-->
+<!--        <input class="form-control mr-sm-2 wbdv-field wbdv-new-course"-->
+<!--               id="title-fld"-->
+<!--               type="text"-->
+<!--               aria-label="add-course"-->
+<!--               placeholder="New course title">-->
+<!--    </form>-->
+
+    <!-- Add course button/link -->
+<!--    <a href="#" class="wbdv-button wbdv-add-course"><i class="fa fa-plus-square fa-2x"></i></a>-->
+
+</nav>
+
+<!-- Course Table -->
+<div class="container">
+
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <!-- Title header -->
+        <th class="wbdv-header wbdv-title">Title</th>
+        <!-- Owned by header -->
+        <th class="wbdv-header wbdv-owner">Owned by</th>
+        <!-- Last modified header -->
+        <th class="wbdv-header wbdv-last-modified">Last Modified</th>
+        <!-- Grid layout button/link -->
+        <th>
+            <a href="#" class="wbdv-button wbdv-grid-layout"><i class="fa fa-th"></i></a>
+        </th>
+        <!-- List layout button/link -->
+        <th>
+            <a href="#" class="wbdv-button wbdv-list-layout"><i class="fa fa-list-ul"></i></a>
+        </th>
+        <!-- Sort header -->
+        <th class="wbdv-header wbdv-sort">
+            <a href="#"><i class="fa fa-sort"></i></a>
+        </th>
+
+        <th>&nbsp;</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <!-- Course row -->
+    <tr class="wbdv-row wbdv-course">
+        <td>
+            <!-- Course row icon -->
+            <i class="fa fa-file-text-o wbdv-row wbdv-icon" aria-hidden="true"></i>
+            <!-- Course row course title -->
+            <a href="course editor/course_editor.template.client.html" class="wbdv-row wbdv-title">
+                CS5200 Database Management System</a>
+        </td>
+        <!-- Course row owner -->
+        <td class="wbdv-row wbdv-owner">me</td>
+        <!-- Course row modified date -->
+        <td class="wbdv-row wbdv-modified-date">4:18 PM</td>
+        <td> </td>
+        <td> </td>
+        <!-- Course row delete button/link -->
+        <td><a href="#"><i class="fa fa-trash pull-right" aria-hidden="true"></i></a></td>
+    </tr>
+
+    <tr class="wbdv-row wbdv-course">
+        <td>
+            <i class="fa fa-file-text-o wbdv-row wbdv-icon" aria-hidden="true"></i>
+            <a href="course editor/course_editor.template.client.html" class="wbdv-row wbdv-title">
+                CS5610 Web Development</a>
+        </td>
+        <td class="wbdv-row wbdv-owner">me</td>
+        <td class="wbdv-row wbdv-modified-date">4:18 PM</td>
+        <td> </td>
+        <td> </td>
+        <td class="wbdv-row wbdv-button wbdv-delete"><a href="#"><i class="fa fa-trash pull-right" aria-hidden="true"></i></a></td>
+    </tr>
+
+    <tr class="wbdv-row wbdv-course">
+        <td>
+            <i class="fa fa-file-text-o wbdv-row wbdv-icon" aria-hidden="true"></i>
+            <a href="course editor/course_editor.template.client.html" class="wbdv-row wbdv-title">
+                CS5500 Foundations of Software Engineering</a>
+        </td>
+        <td class="wbdv-row wbdv-owner">me</td>
+        <td class="wbdv-row wbdv-modified-date">4:18 PM</td>
+        <td> </td>
+        <td> </td>
+        <td class="wbdv-row wbdv-button wbdv-delete"><a href="#"><i class="fa fa-trash pull-right" aria-hidden="true"></i></a></td>
+    </tr>
+
+    <tr class="wbdv-row wbdv-course">
+        <td>
+            <i class="fa fa-file-text-o wbdv-row wbdv-icon" aria-hidden="true"></i>
+            <a href="course editor/course_editor.template.client.html" class="wbdv-row wbdv-title">
+                CS5800 Algorithms</a>
+        </td>
+        <td class="wbdv-row wbdv-owner">me</td>
+        <td class="wbdv-row wbdv-modified-date">4:18 PM</td>
+        <td> </td>
+        <td> </td>
+        <td class="wbdv-row wbdv-button wbdv-delete"><a href="#"><i class="fa fa-trash pull-right" aria-hidden="true"></i></a></td>
+    </tr>
+
+    </tbody>
+
+</table>
+
+</div>
+
+</body>
+</html>

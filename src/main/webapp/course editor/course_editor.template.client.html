@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          rel="stylesheet">
+    <link href="course_editor.style.client.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="container">
+
+<div class="row">
+    <div class="col-4">
+        <!-- Course title-->
+        <h2 class="wbdv-course-title">
+            <!-- Close course editor button/link -->
+            <a href="../index.html" class="wbdv-course-editor wbdv-close">
+                <i class="fa fa-times-circle bs-danger"></i>
+            </a> CS5610
+        </h2>
+
+        <!-- Module list -->
+        <ul class="list-group wbdv-module-list">
+            <!-- Module item -->
+            <li class="list-group-item wbdv-module-item">
+                Module 1 <a href="#"><i class="fa fa-minus-circle pull-right bs-danger"></i></a>
+            </li>
+            <li class="list-group-item wbdv-module-item">
+                Module 2 <a href="#"><i class="fa fa-minus-circle pull-right bs-danger"></i></a>
+            </li>
+            <li class="list-group-item active wbdv-module-item">
+                Module 3 <a href="#"><i class="fa fa-minus-circle pull-right bs-danger"></i></a>
+            </li>
+            <li class="list-group-item wbdv-module-item">
+                Module 4 <a href="#"><i class="fa fa-minus-circle pull-right bs-danger"></i></a>
+            </li>
+            <li class="list-group-item wbdv-module-item">
+                Module 5 <a href="#"><i class="fa fa-minus-circle pull-right bs-danger"></i></a>
+            </li>
+            <li class="list-group-item wbdv-module-item">
+                Module 6 <a href="#"><i class="fa fa-minus-circle pull-right bs-danger"></i></a>
+            </li>
+            <li class="list-group-item wbdv-module-item">
+                Module 7 <a href="#"><i class="fa fa-minus-circle pull-right bs-danger"></i></a>
+            </li>
+            <!-- Add module button/link -->
+            <li class="list-group-item">
+                <a href="#" class="wbdv-module-item-add-btn">
+                    <i class="fa fa-plus-square pull-right"></i></a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="col-8">
+        <!-- Lesson tabs -->
+        <ul class="nav nav-tabs wbdv-lesson-tabs">
+            <!-- New lesson button/link -->
+            <li class="nav-item"><a class="nav-link active" href="#">Lesson 1</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Lesson 2</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Lesson 3</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Lesson 4</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Lesson 5</a></li>
+            <li class="nav-item wbdv-lesson-add-btn">
+                <a class="nav-link" href="#"><i class="fa fa-plus-square fa-lg"></i></a>
+<!--                <button class="btn"><i class="fa fa-plus-square fa-lg"></i></button>-->
+            </li>
+        </ul>
+        <!-- Topic pills -->
+        <ul class="nav nav-pills justify-content-between padding-below-header mb-3 wbdv-topic-pill-list">
+            <!-- Topic pill item -->
+            <li class="nav-item wbdv-topic-pill"><a class="nav-link" href="#">Topic 1</a></li>
+            <li class="nav-item wbdv-topic-pill"><a class="nav-link active" href="#">Topic 2</a></li>
+            <li class="nav-item wbdv-topic-pill"><a class="nav-link" href="#">Topic 3</a></li>
+            <li class="nav-item wbdv-topic-pill"><a class="nav-link" href="#">Topic 4</a></li>
+            <!-- Add topic button/link -->
+            <li class="nav-item wbdv-topic-pill"><a class="nav-link wbdv-topic-add-btn" href="#"><i class="fa fa-plus-square fa-lg"></i></a></li>
+        </ul>
+
+        <br>
+
+        <!-- Header Widget-->
+        <form class="form-inline mb-3">
+            <span class="font-weight-bold h3">Heading Widget</span>
+            <div class="form-group ml-auto">
+                <select class="form-control" aria-label="widget-dropdown">
+                    <option>Heading</option>
+                    <option>YouTube</option>
+                    <option>Slides</option>
+                    <option>Image</option>
+                    <option>List</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-warning ml-2"><i class="fa fa-sort"></i></button>
+            <button type="submit" class="btn btn-danger ml-2"><i class="fa fa-trash"></i></button>
+        </form>
+
+        <!-- Widget Content -->
+        <form>
+            <div class="form-row">
+                <div class="form-group col-sm-6">
+<!--                    <label for="inputEmail4">Email</label>-->
+                    <input type="text" class="form-control" placeholder="Heading text" aria-label="heading-text">
+                </div>
+                <div class="form-group col-sm-6">
+<!--                    <label for="widget-type">Type</label>-->
+                    <select class="form-control" id="widget-type" aria-label="widget-type">
+                        <option>Heading 1</option>
+                        <option>Heading 2</option>
+                        <option>Heading 3</option>
+                    </select>
+                </div>
+            </div>
+
+            <input class="form-control" type="text" placeholder="Type widget name" aria-label="widget-name">
+
+        </form>
+
+    </div>
+
+</div>
+
+</div>
+
+
+</body>
+</html>

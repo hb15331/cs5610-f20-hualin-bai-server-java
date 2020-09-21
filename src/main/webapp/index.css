@@ -1,0 +1,6 @@
+/* Compensate for the fixed top with padding-top */
+.sticky-header {
+    padding-top: 60px;
+}
+
+
