@@ -3,4 +3,10 @@
     padding-top: 60px;
 }
 
+.sticky-add-course-button {
+    position: fixed;
+    right: 20px;
+    bottom: 0;
+    color: #28a745;
+}
 
