@@ -20,15 +20,15 @@
 <body class="sticky-header">
 
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
-    <!-- Course Manager label -->
     <a class="navbar-brand" href="#">Course Manager</a>
     <!-- Toggle Button to hide items for small screen -->
-    <button class="navbar-toggler"
+    <button class="navbar-toggler wbdv-field wbdv-hamburger"
             type="button"
             data-toggle="collapse"
             data-target="#hidden-dropdown">
         <span class="navbar-toggler-icon"></span>
     </button>
+
     <!-- Navbar Items -->
     <div class="collapse navbar-collapse"
          id="hidden-dropdown">
@@ -41,6 +41,7 @@
     </div>
 
     <form class="form-inline">
+        <!-- Course Manager label -->
         <label for="title-fld" class="wbdv-label wbdv-course-manager"></label>
         <div class="input-group">
             <!-- New course title field -->
@@ -78,19 +79,19 @@
         <!-- Title header -->
         <th class="wbdv-header wbdv-title">Title</th>
         <!-- Owned by header -->
-        <th class="wbdv-header wbdv-owner">Owned by</th>
+        <th class="wbdv-header wbdv-owner d-none d-sm-table-cell">Owned by</th>
         <!-- Last modified header -->
-        <th class="wbdv-header wbdv-last-modified">Last Modified</th>
+        <th class="wbdv-header wbdv-last-modified d-none d-sm-table-cell">Last Modified</th>
         <!-- Grid layout button/link -->
-        <th>
+        <th class="d-none d-sm-table-cell">
             <a href="#" class="wbdv-button wbdv-grid-layout"><i class="fa fa-th"></i></a>
         </th>
         <!-- List layout button/link -->
-        <th>
+        <th class="d-none d-sm-table-cell">
             <a href="#" class="wbdv-button wbdv-list-layout"><i class="fa fa-list-ul"></i></a>
         </th>
         <!-- Sort header -->
-        <th class="wbdv-header wbdv-sort">
+        <th class="wbdv-header wbdv-sort d-none d-sm-table-cell">
             <a href="#"><i class="fa fa-sort"></i></a>
         </th>
 
@@ -109,9 +110,9 @@
                 CS5200 Database Management System</a>
         </td>
         <!-- Course row owner -->
-        <td class="wbdv-row wbdv-owner">me</td>
+        <td class="wbdv-row wbdv-owner d-none d-sm-table-cell">me</td>
         <!-- Course row modified date -->
-        <td class="wbdv-row wbdv-modified-date">4:18 PM</td>
+        <td class="wbdv-row wbdv-modified-date d-none d-sm-table-cell">4:18 PM</td>
         <td> </td>
         <td> </td>
         <!-- Course row delete button/link -->
@@ -124,8 +125,8 @@
             <a href="course editor/course_editor.template.client.html" class="wbdv-row wbdv-title">
                 CS5610 Web Development</a>
         </td>
-        <td class="wbdv-row wbdv-owner">me</td>
-        <td class="wbdv-row wbdv-modified-date">4:18 PM</td>
+        <td class="wbdv-row wbdv-owner d-none d-sm-table-cell">me</td>
+        <td class="wbdv-row wbdv-modified-date d-none d-sm-table-cell">4:18 PM</td>
         <td> </td>
         <td> </td>
         <td class="wbdv-row wbdv-button wbdv-delete"><a href="#"><i class="fa fa-trash pull-right" aria-hidden="true"></i></a></td>
@@ -137,8 +138,8 @@
             <a href="course editor/course_editor.template.client.html" class="wbdv-row wbdv-title">
                 CS5500 Foundations of Software Engineering</a>
         </td>
-        <td class="wbdv-row wbdv-owner">me</td>
-        <td class="wbdv-row wbdv-modified-date">4:18 PM</td>
+        <td class="wbdv-row wbdv-owner d-none d-sm-table-cell">me</td>
+        <td class="wbdv-row wbdv-modified-date d-none d-sm-table-cell">4:18 PM</td>
         <td> </td>
         <td> </td>
         <td class="wbdv-row wbdv-button wbdv-delete"><a href="#"><i class="fa fa-trash pull-right" aria-hidden="true"></i></a></td>
@@ -150,8 +151,8 @@
             <a href="course editor/course_editor.template.client.html" class="wbdv-row wbdv-title">
                 CS5800 Algorithms</a>
         </td>
-        <td class="wbdv-row wbdv-owner">me</td>
-        <td class="wbdv-row wbdv-modified-date">4:18 PM</td>
+        <td class="wbdv-row wbdv-owner d-none d-sm-table-cell">me</td>
+        <td class="wbdv-row wbdv-modified-date d-none d-sm-table-cell">4:18 PM</td>
         <td> </td>
         <td> </td>
         <td class="wbdv-row wbdv-button wbdv-delete"><a href="#"><i class="fa fa-trash pull-right" aria-hidden="true"></i></a></td>
@@ -164,8 +165,8 @@
             <a href="course editor/course_editor.template.client.html" class="wbdv-row wbdv-title">
                 CS5001</a>
         </td>
-        <td class="wbdv-row wbdv-owner">me</td>
-        <td class="wbdv-row wbdv-modified-date">4:18 PM</td>
+        <td class="wbdv-row wbdv-owner d-none d-sm-table-cell">me</td>
+        <td class="wbdv-row wbdv-modified-date d-none d-sm-table-cell">4:18 PM</td>
         <td> </td>
         <td> </td>
         <td class="wbdv-row wbdv-button wbdv-delete"><a href="#"><i class="fa fa-trash pull-right" aria-hidden="true"></i></a></td>
@@ -177,8 +178,8 @@
             <a href="course editor/course_editor.template.client.html" class="wbdv-row wbdv-title">
                 CS5002</a>
         </td>
-        <td class="wbdv-row wbdv-owner">me</td>
-        <td class="wbdv-row wbdv-modified-date">4:18 PM</td>
+        <td class="wbdv-row wbdv-owner d-none d-sm-table-cell">me</td>
+        <td class="wbdv-row wbdv-modified-date d-none d-sm-table-cell">4:18 PM</td>
         <td> </td>
         <td> </td>
         <td class="wbdv-row wbdv-button wbdv-delete"><a href="#"><i class="fa fa-trash pull-right" aria-hidden="true"></i></a></td>
@@ -190,8 +191,8 @@
             <a href="course editor/course_editor.template.client.html" class="wbdv-row wbdv-title">
                 CS5004</a>
         </td>
-        <td class="wbdv-row wbdv-owner">me</td>
-        <td class="wbdv-row wbdv-modified-date">4:18 PM</td>
+        <td class="wbdv-row wbdv-owner d-none d-sm-table-cell">me</td>
+        <td class="wbdv-row wbdv-modified-date d-none d-sm-table-cell">4:18 PM</td>
         <td> </td>
         <td> </td>
         <td class="wbdv-row wbdv-button wbdv-delete"><a href="#"><i class="fa fa-trash pull-right" aria-hidden="true"></i></a></td>
@@ -204,8 +205,8 @@
             <a href="course editor/course_editor.template.client.html" class="wbdv-row wbdv-title">
                 CS5006</a>
         </td>
-        <td class="wbdv-row wbdv-owner">me</td>
-        <td class="wbdv-row wbdv-modified-date">4:18 PM</td>
+        <td class="wbdv-row wbdv-owner d-none d-sm-table-cell">me</td>
+        <td class="wbdv-row wbdv-modified-date d-none d-sm-table-cell">4:18 PM</td>
         <td> </td>
         <td> </td>
         <td class="wbdv-row wbdv-button wbdv-delete"><a href="#"><i class="fa fa-trash pull-right" aria-hidden="true"></i></a></td>
@@ -217,8 +218,8 @@
             <a href="course editor/course_editor.template.client.html" class="wbdv-row wbdv-title">
                 CS5007</a>
         </td>
-        <td class="wbdv-row wbdv-owner">me</td>
-        <td class="wbdv-row wbdv-modified-date">4:18 PM</td>
+        <td class="wbdv-row wbdv-owner d-none d-sm-table-cell">me</td>
+        <td class="wbdv-row wbdv-modified-date d-none d-sm-table-cell">4:18 PM</td>
         <td> </td>
         <td> </td>
         <td class="wbdv-row wbdv-button wbdv-delete"><a href="#"><i class="fa fa-trash pull-right" aria-hidden="true"></i></a></td>
@@ -230,8 +231,8 @@
             <a href="course editor/course_editor.template.client.html" class="wbdv-row wbdv-title">
                 CS5100</a>
         </td>
-        <td class="wbdv-row wbdv-owner">me</td>
-        <td class="wbdv-row wbdv-modified-date">4:18 PM</td>
+        <td class="wbdv-row wbdv-owner d-none d-sm-table-cell">me</td>
+        <td class="wbdv-row wbdv-modified-date d-none d-sm-table-cell">4:18 PM</td>
         <td> </td>
         <td> </td>
         <td class="wbdv-row wbdv-button wbdv-delete"><a href="#"><i class="fa fa-trash pull-right" aria-hidden="true"></i></a></td>
@@ -243,8 +244,8 @@
             <a href="course editor/course_editor.template.client.html" class="wbdv-row wbdv-title">
                 CS5400</a>
         </td>
-        <td class="wbdv-row wbdv-owner">me</td>
-        <td class="wbdv-row wbdv-modified-date">4:18 PM</td>
+        <td class="wbdv-row wbdv-owner d-none d-sm-table-cell">me</td>
+        <td class="wbdv-row wbdv-modified-date d-none d-sm-table-cell">4:18 PM</td>
         <td> </td>
         <td> </td>
         <td class="wbdv-row wbdv-button wbdv-delete"><a href="#"><i class="fa fa-trash pull-right" aria-hidden="true"></i></a></td>
@@ -257,8 +258,8 @@
             <a href="course editor/course_editor.template.client.html" class="wbdv-row wbdv-title">
                 CS5300</a>
         </td>
-        <td class="wbdv-row wbdv-owner">me</td>
-        <td class="wbdv-row wbdv-modified-date">4:18 PM</td>
+        <td class="wbdv-row wbdv-owner d-none d-sm-table-cell">me</td>
+        <td class="wbdv-row wbdv-modified-date d-none d-sm-table-cell">4:18 PM</td>
         <td> </td>
         <td> </td>
         <td class="wbdv-row wbdv-button wbdv-delete"><a href="#"><i class="fa fa-trash pull-right" aria-hidden="true"></i></a></td>
@@ -270,8 +271,8 @@
             <a href="course editor/course_editor.template.client.html" class="wbdv-row wbdv-title">
                 CS5700</a>
         </td>
-        <td class="wbdv-row wbdv-owner">me</td>
-        <td class="wbdv-row wbdv-modified-date">4:18 PM</td>
+        <td class="wbdv-row wbdv-owner d-none d-sm-table-cell">me</td>
+        <td class="wbdv-row wbdv-modified-date d-none d-sm-table-cell">4:18 PM</td>
         <td> </td>
         <td> </td>
         <td class="wbdv-row wbdv-button wbdv-delete"><a href="#"><i class="fa fa-trash pull-right" aria-hidden="true"></i></a></td>
@@ -283,8 +284,8 @@
             <a href="course editor/course_editor.template.client.html" class="wbdv-row wbdv-title">
                 CS5900</a>
         </td>
-        <td class="wbdv-row wbdv-owner">me</td>
-        <td class="wbdv-row wbdv-modified-date">4:18 PM</td>
+        <td class="wbdv-row wbdv-owner d-none d-sm-table-cell">me</td>
+        <td class="wbdv-row wbdv-modified-date d-none d-sm-table-cell">4:18 PM</td>
         <td> </td>
         <td> </td>
         <td class="wbdv-row wbdv-button wbdv-delete"><a href="#"><i class="fa fa-trash pull-right" aria-hidden="true"></i></a></td>
@@ -296,8 +297,8 @@
             <a href="course editor/course_editor.template.client.html" class="wbdv-row wbdv-title">
                 CS6000</a>
         </td>
-        <td class="wbdv-row wbdv-owner">me</td>
-        <td class="wbdv-row wbdv-modified-date">4:18 PM</td>
+        <td class="wbdv-row wbdv-owner d-none d-sm-table-cell">me</td>
+        <td class="wbdv-row wbdv-modified-date d-none d-sm-table-cell">4:18 PM</td>
         <td> </td>
         <td> </td>
         <td class="wbdv-row wbdv-button wbdv-delete"><a href="#"><i class="fa fa-trash pull-right" aria-hidden="true"></i></a></td>
@@ -309,8 +310,8 @@
             <a href="course editor/course_editor.template.client.html" class="wbdv-row wbdv-title">
                 CS6200</a>
         </td>
-        <td class="wbdv-row wbdv-owner">me</td>
-        <td class="wbdv-row wbdv-modified-date">4:18 PM</td>
+        <td class="wbdv-row wbdv-owner d-none d-sm-table-cell">me</td>
+        <td class="wbdv-row wbdv-modified-date d-none d-sm-table-cell">4:18 PM</td>
         <td> </td>
         <td> </td>
         <td class="wbdv-row wbdv-button wbdv-delete"><a href="#"><i class="fa fa-trash pull-right" aria-hidden="true"></i></a></td>
@@ -322,8 +323,8 @@
             <a href="course editor/course_editor.template.client.html" class="wbdv-row wbdv-title">
                 CS6300</a>
         </td>
-        <td class="wbdv-row wbdv-owner">me</td>
-        <td class="wbdv-row wbdv-modified-date">4:18 PM</td>
+        <td class="wbdv-row wbdv-owner d-none d-sm-table-cell">me</td>
+        <td class="wbdv-row wbdv-modified-date d-none d-sm-table-cell">4:18 PM</td>
         <td> </td>
         <td> </td>
         <td class="wbdv-row wbdv-button wbdv-delete"><a href="#"><i class="fa fa-trash pull-right" aria-hidden="true"></i></a></td>
