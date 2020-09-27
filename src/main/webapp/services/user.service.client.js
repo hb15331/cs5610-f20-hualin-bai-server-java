@@ -7,12 +7,14 @@ function AdminUserServiceClient() {
     this.url = 'https://wbdv-generic-server.herokuapp.com/api/jannunzi/users';
     // var self = this;
 
+
     // lambda functions that return a promise on calling json()
     // then manipulate the json data in the controller
     function findAllUsers() {
         return fetch(this.url)
             .then(response => response.json());
     }
+
 
     // user object is formatted by browser as a stream of bytes
     // and sent to server
@@ -30,7 +32,14 @@ function AdminUserServiceClient() {
             .then(response => response.json());
     }
 
-    function findUserById(userId) { }
+
+    function findUserById(userId) {
+
+        return fetch(`https://wbdv-generic-server.herokuapp.com/api/jannunzi/users/${userId}`)
+            .then(response => response.json());
+
+    }
+
 
     // params: userId and all new data of user
     function updateUser(userId, user) {
@@ -43,10 +52,11 @@ function AdminUserServiceClient() {
         })
     }
 
+
     // userId is the primary key that specifies which record to remove
     // override the default method GET with DELETE
     function deleteUser(userId) {
-        return fetch(this.url + userId, {
+        return fetch(`https://wbdv-generic-server.herokuapp.com/api/jannunzi/users/${userId}`, {
             method: 'DELETE'
         });
     }

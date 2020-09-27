@@ -29,16 +29,17 @@ let $roleFld
 
 const userService = new AdminUserServiceClient();
 
-const deleteUser1 = (event) => {
-    const deleteBtn = $(event.currentTarget)
-    deleteBtn.parents("tr.wbdv-template").remove()
-}
+// const deleteUser1 = (event) => {
+//     const deleteBtn = $(event.currentTarget)
+//     deleteBtn.parents("tr.wbdv-template").remove()
+// }
 
 // records which user is selected for update
 let selectedUserIndex = -1 // -1 denotes no user is selected
 const selectUser = (index) => {
 
     selectedUserIndex = index
+    // copy the selected user's data to form
     $usernameFld.val(users[index].username)
     $firstNameFld.val(users[index].first)
     $lastNameFld.val(users[index].last)
@@ -101,13 +102,13 @@ const createUser = () => {
     const firstName = $firstNameFld.val()
     const lastName = $lastNameFld.val()
     const role = $roleFld.val()
-    console.log(role)
+    // console.log(role)
 
-    // reset the value of input field
+    // clicking on create or update clears the form
     $usernameFld.val("")
     $firstNameFld.val("")
     $lastNameFld.val("")
-    $roleFld.val("Faculty")
+    $roleFld.val("FACULTY")
 
     // newUser: the user object sent to remote server
     // this object does not have an id
@@ -132,34 +133,37 @@ const createUser = () => {
 
 const updateUser = () => {
 
-    const selectedUser = users[selectedUserIndex];
-    // selectedUser.username = $usernameFld.val();
-    // selectedUser.first = $firstNameFld.val();
-    // selectedUser.last = $lastNameFld.val();
+    const newUsername = $usernameFld.val()
+    const newFirstName = $firstNameFld.val()
+    const newLastName = $lastNameFld.val()
+    const newRole = $roleFld.val()
+    const userId = users[selectedUserIndex]._id
 
-    const newUserName = $usernameFld.val();
-    const newFirstName = $firstNameFld.val();
-    const newLastName = $lastNameFld.val();
+    // clicking on create or update clears the form
+    $usernameFld.val("")
+    $firstNameFld.val("")
+    $lastNameFld.val("")
+    $roleFld.val("FACULTY")
 
-    const updatedUser = {
-        username: newUserName,
-        first: newFirstName,
-        last: newLastName
-    }
     // modify the local array after the promise is fulfilled
-    userService.updateUser(selectedUser._id, updatedUser)
-        .then(() => {
-            users[selectedUserIndex] = updatedUser;
-            renderUsers(users);
+    userService.updateUser(userId, {
+        username: newUsername,
+        first: newFirstName,
+        last: newLastName,
+        role: newRole
+    })
+        .then(response => {
+            users[selectedUserIndex].username = newUsername
+            users[selectedUserIndex].first = newFirstName
+            users[selectedUserIndex].last = newLastName
+            users[selectedUserIndex].role = newRole
+            renderUsers(users)
         })
 
 }
 
 
-
 const init = () => {
-
-    userService.findAllUsers();
 
     tbody = $("tbody")
     template = $("tr.wbdv-template")
@@ -176,10 +180,19 @@ const init = () => {
     // render the page based on the local copy of users
     userService.findAllUsers()
         .then((_users) => {
-            console.log(_users)
+            // console.log(_users)
             users = _users
             renderUsers(users)
         })
+
+    // an arbitrary id that currently exists in server
+    const id = "5f70c3ba65bbe9001718624f";
+    // const id = "0000";
+    userService.findUserById(id)
+        .then(_user => {
+            console.log(_user)
+        })
+
 
 }
 
