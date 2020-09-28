@@ -34,10 +34,8 @@ function AdminUserServiceClient() {
 
 
     function findUserById(userId) {
-
         return fetch(`https://wbdv-generic-server.herokuapp.com/api/jannunzi/users/${userId}`)
             .then(response => response.json());
-
     }
 
 
