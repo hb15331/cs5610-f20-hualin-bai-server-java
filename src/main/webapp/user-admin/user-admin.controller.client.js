@@ -1,24 +1,24 @@
 (function () {
 
     let users = [
-        {
-            username: 'alice',
-            fName: 'Alice',
-            lName: 'Wonderland',
-            role: 'Faculty'
-        },
-        {
-            username: 'bob',
-            fName: 'Robert',
-            lName: 'Marley',
-            role: 'Student'
-        },
-        {
-            username: 'charlie',
-            fName: 'Charlie',
-            lName: 'Garcia',
-            role: 'Admin'
-        }
+        // {
+        //     username: 'alice',
+        //     fName: 'Alice',
+        //     lName: 'Wonderland',
+        //     role: 'Faculty'
+        // },
+        // {
+        //     username: 'bob',
+        //     fName: 'Robert',
+        //     lName: 'Marley',
+        //     role: 'Student'
+        // },
+        // {
+        //     username: 'charlie',
+        //     fName: 'Charlie',
+        //     lName: 'Garcia',
+        //     role: 'Admin'
+        // }
     ]
 
     let tbody
@@ -31,7 +31,7 @@
 
     const userService = new AdminUserServiceClient();
 
-// records which user is selected for update
+    // records which user is selected for update
     let selectedUserIndex = -1 // -1 denotes no user is selected
     const selectUser = (index) => {
 
@@ -160,11 +160,37 @@
 
     }
 
-// holds alternative implementation
-// wrap the service function in another function
+    // holds alternative implementation
+    // wrap the service function in another function
     const findUserById = (userId) => {
         return userService.findUserById(userId);
     }
+
+
+    // search local array for items that meet the input criteria
+    const searchItem = () => {
+
+        const inputUsername = $usernameFld.val()
+        const inputFirst = $firstNameFld.val()
+        const inputLast = $lastNameFld.val()
+        const inputRole = $roleFld.val()
+
+        let filteredUsers = [];
+
+        for (let i = 0; i < users.length; i++) {
+            if ((inputUsername === users[i].username || inputUsername === "") &&
+                (inputFirst === users[i].first || inputFirst === "") &&
+                (inputLast === users[i].last || inputLast === "") &&
+                (inputRole === users[i].role)) {
+
+                filteredUsers.push(users[i]);
+            }
+        }
+        // console.log(filteredUsers);
+        renderUsers(filteredUsers);
+    }
+
+
 
     const init = () => {
 
@@ -178,6 +204,8 @@
         $passwordFld = $("#passwordFld")
 
         $(".wbdv-update").click(updateUser);
+
+        $(".wbdv-search").click(searchItem);
 
         // _users: this array is from the server
         // users: local copy of the remote array
