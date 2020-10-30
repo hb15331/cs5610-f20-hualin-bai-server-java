@@ -4,12 +4,23 @@ public class Widget {
   private String id;
   private String name;
   private String type;
+  // when create a new widget and send to service.java,
+  // need to specify the topic it belongs to
+  private String topicId;
 
   public Widget(String id, String name, String type) {
     this.id = id;
     this.name = name;
     this.type = type;
   }
+
+  public Widget(String id, String name, String type, String topicId) {
+    this.id = id;
+    this.name = name;
+    this.type = type;
+    this.topicId = topicId;
+  }
+
 
   // need a default constructor that takes no argument
   public Widget() {
@@ -38,4 +49,13 @@ public class Widget {
   public void setType(String type) {
     this.type = type;
   }
+
+  public String getTopicId() {
+    return this.topicId;
+  }
+
+  public void setTopicId(String topicId) {
+    this.topicId = topicId;
+  }
+
 }
