@@ -7,6 +7,8 @@ public class Widget {
   // when create a new widget and send to service.java,
   // need to specify the topic it belongs to
   private String topicId;
+  private String text;
+  private Integer size;
 
   public Widget(String id, String name, String type) {
     this.id = id;
@@ -57,5 +59,23 @@ public class Widget {
   public void setTopicId(String topicId) {
     this.topicId = topicId;
   }
+
+  public String getText() {
+    return text;
+  }
+
+  public void setText(String text) {
+    this.text = text;
+  }
+
+  public Integer getSize() {
+    return size;
+  }
+
+  public void setSize(Integer size) {
+    this.size = size;
+  }
+
+
 
 }

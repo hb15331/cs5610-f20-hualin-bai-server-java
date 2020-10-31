@@ -77,6 +77,8 @@ public class WidgetService {
       if (w.getId().equals(widgetId)) {
         w.setName(newWidget.getName());
         w.setType(newWidget.getType());
+        w.setText(newWidget.getText());
+        w.setSize(newWidget.getSize());
         return 1;
       }
     }
