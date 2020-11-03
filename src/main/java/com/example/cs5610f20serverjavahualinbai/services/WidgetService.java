@@ -10,14 +10,6 @@ public class WidgetService {
 
   // hardcode a local list of widgets to simulate a database
   List<Widget> widgets = new ArrayList<>();
-//  {
-//
-//    widgets.add(new Widget("123", "Widget 123", "HEADING", "5f90dca2895b1e0017f05dec"));
-//    widgets.add(new Widget("234", "Widget 234", "PARAGRAPH", "5f90dca5895b1e0017f05ded"));
-//    // third widget belongs to some other topic
-//    widgets.add(new Widget("345", "Widget 345", "HEADING", "5f90dca5895b1e0017f05ded"));
-//
-//  }
 
 
   // @GetMapping("/find/all/widgets") // bad url
@@ -95,6 +87,34 @@ public class WidgetService {
     }
     return 0;
   }
+
+
+  public List<Widget> moveWidget(String topicId, String widgetId, String direction) {
+    List<Widget> widgetsForTopic = findWidgetsForTopic(topicId);
+    Widget widget = findWidgetById(widgetId);
+    Integer prevOrder = widget.getWidgetOrder();
+
+    for (Widget w : widgetsForTopic) {
+      if (direction.equals("up")) {
+        // if the current widget is immediately above the selected widget
+        // moves down the current widget
+        if (w.getWidgetOrder() == prevOrder - 1) {
+          w.setWidgetOrder(w.getWidgetOrder() + 1);
+        }
+        // if the current widget is the selected widget
+        // moves up the selected widget
+        if (w.getId().equals(widgetId)) {
+          w.setWidgetOrder(prevOrder - 1);
+        }
+      }
+      // TODO: MOVE DOWN
+    }
+
+    // sort the widget list based on the order of each widget
+    widgetsForTopic.sort((w1, w2) -> w1.getWidgetOrder().compareTo(w2.getWidgetOrder()));
+    return widgetsForTopic;
+  }
+
 
 
 }

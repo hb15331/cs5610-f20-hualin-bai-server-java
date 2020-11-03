@@ -9,6 +9,9 @@ public class Widget {
   private String topicId;
   private String text;
   private Integer size;
+  private Integer widgetOrder;
+
+
 
   public Widget(String id, String name, String type) {
     this.id = id;
@@ -74,6 +77,14 @@ public class Widget {
 
   public void setSize(Integer size) {
     this.size = size;
+  }
+
+  public Integer getWidgetOrder() {
+    return widgetOrder;
+  }
+
+  public void setWidgetOrder(Integer widgetOrder) {
+    this.widgetOrder = widgetOrder;
   }
 
 
