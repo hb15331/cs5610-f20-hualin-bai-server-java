@@ -12,7 +12,7 @@ public class WidgetService {
   List<Widget> widgets = new ArrayList<>();
 
 
-  // @GetMapping("/find/all/widgets") // bad url
+
   // add token api to tell that this is not physical directory structure
   // but an api meant for dynamic data access
   public List<Widget> findAllWidgets() {

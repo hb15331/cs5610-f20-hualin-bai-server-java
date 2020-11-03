@@ -31,7 +31,6 @@ public class WidgetController {
   }
 
 
-  // @GetMapping("/find/all/widgets") // bad url
   // add token api to tell that this is not physical directory structure
   // but an api meant for dynamic data access
   @GetMapping("/api/widgets")

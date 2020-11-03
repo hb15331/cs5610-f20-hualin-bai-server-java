@@ -4,8 +4,7 @@ public class Widget {
   private String id;
   private String name;
   private String type;
-  // when create a new widget and send to service.java,
-  // need to specify the topic it belongs to
+  // when create a new widget and send to service.java, need to specify the topic it belongs to
   private String topicId;
   private String text;
   private Integer size;
