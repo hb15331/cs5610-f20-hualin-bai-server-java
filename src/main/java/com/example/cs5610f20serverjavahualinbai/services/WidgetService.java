@@ -73,6 +73,8 @@ public class WidgetService {
       Widget widget = (Widget) widgetO.get();
       widget.setName(newWidget.getName());
       widget.setType(newWidget.getType());
+      widget.setText(newWidget.getText());
+      widget.setSize(newWidget.getSize());
       // save the widget we retrieved from database, not the newWidget
       // if we save newWidget, we would insert a new record
       return widgetRepository.save(widget);
@@ -93,8 +95,17 @@ public class WidgetService {
   }
 
 
-  public void deleteWidget(Integer widgetId) {
-    widgetRepository.deleteById(widgetId);
+  public Integer deleteWidget(Integer widgetId) {
+
+    Optional widgetO = widgetRepository.findById(widgetId);
+    if (widgetO.isPresent()) {
+      // the selected widget exists in database, delete is successful
+      widgetRepository.deleteById(widgetId);
+      return 1;
+    } else {
+      return 0;
+    }
+
   }
 
 

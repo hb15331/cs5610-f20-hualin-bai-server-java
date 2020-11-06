@@ -26,11 +26,11 @@ public class WidgetController {
   WidgetService service; // = new WidgetService();
 
 
-  @GetMapping("/hello")
+//  @GetMapping("/hello")
   // if the incoming request is GET, execute the following function
-  public String sayHello() {
-    return "Hello World!!";
-  }
+//  public String sayHello() {
+//    return "Hello World!!";
+//  }
 
 
 
@@ -83,8 +83,8 @@ public class WidgetController {
 
 
   @DeleteMapping("/api/widgets/{wid}")
-  public void deleteWidget(@PathVariable("wid") Integer widgetId) {
-    service.deleteWidget(widgetId);
+  public Integer deleteWidget(@PathVariable("wid") Integer widgetId) {
+    return service.deleteWidget(widgetId);
   }
 
 
