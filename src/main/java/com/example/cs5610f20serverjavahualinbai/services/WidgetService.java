@@ -28,24 +28,13 @@ public class WidgetService {
 
   public List<Widget> findWidgetsForTopic(String topicId) {
     return widgetRepository.findWidgetsForTopic(topicId);
-//    List<Widget> ws = new ArrayList<>();
-//    for (Widget w : widgets) {
-//      if (w.getTopicId().equals(topicId)) {
-//        ws.add(w);
-//      }
-//    }
-//    return ws;
+
   }
 
 
   public Widget findWidgetById(Integer widgetId) {
     return widgetRepository.findById(widgetId).get();
-//    for (Widget w : widgets) {
-//      if (w.getId().equals(widgetId)) {
-//        return w;
-//      }
-//    }
-//    return null;
+
   }
 
 
@@ -55,11 +44,6 @@ public class WidgetService {
     // returns a new object inserted including primary key
     return widgetRepository.save(widget);
 
-    //widget.setId(123);
-    // supposedly would be an insert into database
-    //widgets.add(widget);
-    // return the actual object inserted to database
-    //return widget;
   }
 
 
@@ -75,6 +59,7 @@ public class WidgetService {
       widget.setType(newWidget.getType());
       widget.setText(newWidget.getText());
       widget.setSize(newWidget.getSize());
+      widget.setUrl(newWidget.getUrl());
       // save the widget we retrieved from database, not the newWidget
       // if we save newWidget, we would insert a new record
       return widgetRepository.save(widget);
@@ -82,16 +67,6 @@ public class WidgetService {
       return null;
     }
 
-//    for (Widget w : widgets) {
-//      if (w.getId().equals(widgetId)) {
-//        w.setName(newWidget.getName());
-//        w.setType(newWidget.getType());
-//        w.setText(newWidget.getText());
-//        w.setSize(newWidget.getSize());
-//        return 1;
-//      }
-//    }
-//    return 0;
   }
 
 
@@ -107,17 +82,6 @@ public class WidgetService {
     }
 
   }
-
-
-//  public Integer deleteWidget(Integer widgetId) {
-//    for (Widget w : widgets) {
-//      if (w.getId().equals(widgetId)) {
-//        widgets.remove(w);
-//        return 1;
-//      }
-//    }
-//    return 0;
-//  }
 
 
 //  public List<Widget> moveWidget(String topicId, Integer widgetId, String direction) {

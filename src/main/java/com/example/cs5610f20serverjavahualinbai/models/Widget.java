@@ -22,7 +22,8 @@ public class Widget {
   private String topicId;
   private String text;
   private Integer size;
-//  private Integer widgetOrder;
+  private String url;
+  //private Integer widgetOrder;
 
 
   public Widget(Integer id, String name, String type) {
@@ -90,7 +91,15 @@ public class Widget {
     this.size = size;
   }
 
-//  public Integer getWidgetOrder() {
+  public String getUrl() {
+    return url;
+  }
+
+  public void setUrl(String url) {
+    this.url = url;
+  }
+
+  //  public Integer getWidgetOrder() {
 //    return widgetOrder;
 //  }
 //
