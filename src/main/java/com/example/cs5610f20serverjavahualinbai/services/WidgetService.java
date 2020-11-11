@@ -60,6 +60,7 @@ public class WidgetService {
       widget.setText(newWidget.getText());
       widget.setSize(newWidget.getSize());
       widget.setUrl(newWidget.getUrl());
+      widget.setOrdered(newWidget.getOrdered());
       // save the widget we retrieved from database, not the newWidget
       // if we save newWidget, we would insert a new record
       return widgetRepository.save(widget);

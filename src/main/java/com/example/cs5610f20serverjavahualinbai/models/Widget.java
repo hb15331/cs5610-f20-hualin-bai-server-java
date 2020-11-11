@@ -23,6 +23,7 @@ public class Widget {
   private String text;
   private Integer size;
   private String url;
+  private Boolean ordered;
   //private Integer widgetOrder;
 
 
@@ -98,6 +99,15 @@ public class Widget {
   public void setUrl(String url) {
     this.url = url;
   }
+
+  public Boolean getOrdered() {
+    return ordered;
+  }
+
+  public void setOrdered(Boolean ordered) {
+    this.ordered = ordered;
+  }
+
 
   //  public Integer getWidgetOrder() {
 //    return widgetOrder;
