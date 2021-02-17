@@ -1,5 +1,9 @@
-## Description
+## Project Title
+Course Management Website for Faculty
 
-This repository maintains the code on the server side.
-The following repository maintains the front end:
+## Description
+This repository maintains the Spring Boot server of the website where
+faculty can search, add, delete and update the course-related data.
+
+The following repository maintains the UI part of the website:
 https://github.com/hb15331/cs5610-f20-client-react-hualinbai
